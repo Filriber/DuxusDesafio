@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "389546dc-38be-4e28-916d-97ee778e9dd9",
+		"name": "Duxus - Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39582130"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Integrantes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"franquia\": \"Arena Breakout: Infinite\",\r\n    \"nome\": \"Minzão\",\r\n    \"funcao\": \"Muleta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cadastrar-integrantes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cadastrar-integrantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos os Integrantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/buscar-todos-integrantes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"buscar-todos-integrantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar integrantes por nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/buscar-integrante-por-nome?nome=Minzão",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"buscar-integrante-por-nome"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Minzão"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

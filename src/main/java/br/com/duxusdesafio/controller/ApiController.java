@@ -1,8 +1,13 @@
 package br.com.duxusdesafio.controller;
 
+import br.com.duxusdesafio.dto.IntegrantesRequest;
+import br.com.duxusdesafio.dto.IntegrantesResponse;
 import br.com.duxusdesafio.service.ApiService;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -15,5 +20,22 @@ public class ApiController {
         this.apiService = apiService;
     }
 
+    @PostMapping("/cadastrar-integrantes")
+    ResponseEntity<Object> cadastrarIntegrantes(@RequestBody IntegrantesRequest integrantesRequest) {
+
+       apiService.cadastrarIntegrantes(integrantesRequest);
+       return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    @GetMapping("/buscar-todos-integrantes")
+    ResponseEntity<List<IntegrantesResponse>> buscarIntegrantes() {
+        return ResponseEntity.ok(apiService.buscarIntegrantes());
+    }
+
+    @GetMapping("/buscar-integrante-por-nome")
+    ResponseEntity<IntegrantesResponse> buscarIntegrantePorNome(
+            @RequestParam("nome") String nome) {
+        return ResponseEntity.ok(apiService.buscarIntegrantePorNome(nome));
+    }
 
 }

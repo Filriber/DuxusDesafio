@@ -1,6 +1,13 @@
-C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\model\ComposicaoTime.java
-C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\ServletInitializer.java
+C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\controller\ApiController.java
 C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\DuxusdesafioApplication.java
 C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\model\Time.java
+C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\service\impl\ApiServiceImpl.java
+C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\dto\IntegrantesRequest.java
+C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\repository\ComposicaoTimeRepository.java
+C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\repository\TimeRepository.java
+C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\dto\IntegrantesResponse.java
+C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\model\ComposicaoTime.java
+C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\repository\IntegranteRepository.java
 C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\service\ApiService.java
 C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\model\Integrante.java
+C:\Users\Filri\Desktop\Projetos\desafioDuxus\src\main\java\br\com\duxusdesafio\config\ModelMapperConfig.java
