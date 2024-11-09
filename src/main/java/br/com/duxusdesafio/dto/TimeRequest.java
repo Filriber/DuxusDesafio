@@ -5,17 +5,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class IntegrantesRequest {
+public class TimeRequest {
 
-    private String franquia;
+    private LocalDate data;
 
-    private String nome;
+    private String nomeTime;
 
-    private String funcao;
 }
-
-

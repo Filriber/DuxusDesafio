@@ -1,10 +1,9 @@
 package br.com.duxusdesafio.service;
 
-import br.com.duxusdesafio.dto.IntegrantesRequest;
-import br.com.duxusdesafio.dto.IntegrantesResponse;
+import br.com.duxusdesafio.dto.*;
 import br.com.duxusdesafio.model.Integrante;
 import br.com.duxusdesafio.model.Time;
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,7 +21,8 @@ public interface ApiService {
     /**
      * Vai retornar uma lista com os nomes dos integrantes do time daquela data
      */
-    Time timeDaData(LocalDate data, List<Time> todosOsTimes);
+    @Autowired
+    TimeResponse timeDaData(LocalDate data);
 
     /**
      * Vai retornar o integrante que tiver presente na maior quantidade de times
@@ -60,9 +60,18 @@ public interface ApiService {
     Map<String, Long> contagemPorFuncao(LocalDate dataInicial, LocalDate dataFinal, List<Time> todosOsTimes);
 
 
+    void cadastrarTime(TimeRequest timeRequest);
+
+    TimeResponse buscarTimePorData(LocalDate data);
+
     void cadastrarIntegrantes(IntegrantesRequest integrantesRequest);
 
+    void cadastrarComposicaoTime(ComposicaoTimeRequest composicaoTimeRequest);
+
     List<IntegrantesResponse> buscarIntegrantes();
+
+
+    List<TimeResponse> buscarTimes();
 
     IntegrantesResponse buscarIntegrantePorNome(String nome);
 

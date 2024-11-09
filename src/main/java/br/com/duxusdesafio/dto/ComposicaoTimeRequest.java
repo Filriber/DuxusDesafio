@@ -9,13 +9,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class IntegrantesRequest {
+public class ComposicaoTimeRequest {
 
-    private String franquia;
+    private Long integranteId;
 
-    private String nome;
-
-    private String funcao;
+    private Long timeId;
 }
-
-

@@ -1,12 +1,14 @@
 package br.com.duxusdesafio.controller;
 
-import br.com.duxusdesafio.dto.IntegrantesRequest;
-import br.com.duxusdesafio.dto.IntegrantesResponse;
+import br.com.duxusdesafio.dto.*;
+import br.com.duxusdesafio.model.Time;
 import br.com.duxusdesafio.service.ApiService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -37,5 +39,20 @@ public class ApiController {
             @RequestParam("nome") String nome) {
         return ResponseEntity.ok(apiService.buscarIntegrantePorNome(nome));
     }
+    @PostMapping ("/cadastrar-times")
+    ResponseEntity<Object> cadastrarTimes(@RequestBody TimeRequest timeRequest){
+
+        apiService.cadastrarTime(timeRequest);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    @GetMapping("/time-da-data")
+    ResponseEntity<TimeResponse> buscarTimePorData(
+            @RequestParam("data") LocalDate data){
+        return ResponseEntity.ok(apiService.buscarTimePorData(data));
+    }
+
+
+
 
 }

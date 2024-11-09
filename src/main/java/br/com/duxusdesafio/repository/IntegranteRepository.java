@@ -10,9 +10,11 @@ import org.springframework.stereotype.Repository;
 public interface IntegranteRepository extends JpaRepository<Integrante, Long> {
 
     @Query(value = "SELECT i "
-        + "FROM Integrante i "
-        + "WHERE i.nome like '%:nome%'")
+            + "FROM Integrante i "
+            + "WHERE i.nome like '%:nome%'")
     Integrante findByNome(@Param("nome") String nome);
+
+
 
 
 }
